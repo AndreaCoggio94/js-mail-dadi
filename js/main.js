@@ -11,6 +11,8 @@ const acceptedUsers = [
 ];
 console.log(acceptedUsers.length);
 
+let functionNumber = acceptedUsers.length;
+
 // prompt user mail
 
 const userMail = prompt("Inserisci la tua mail").toLowerCase();
@@ -18,8 +20,15 @@ console.log(userMail);
 
 // check list
 
-for (let i = 0; i < acceptedUsers.length; i++) {
+let accepted = 0;
+
+for (let i = 0; i < functionNumber; i++) {
   if (userMail === acceptedUsers[i]) {
-    console.log("accepted");
+    accepted = 1;
+    functionNumber = i;
+  } else {
+    accepted = 0;
   }
 }
+
+console.log(accepted);
