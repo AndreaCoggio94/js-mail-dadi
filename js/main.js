@@ -11,8 +11,6 @@ const acceptedUsers = [
 ];
 console.log(acceptedUsers.length);
 
-let functionNumber = acceptedUsers.length;
-
 // prompt user mail
 
 const userMail = prompt("Inserisci la tua mail").toLowerCase();
@@ -22,12 +20,9 @@ console.log(userMail);
 
 let accepted = 0;
 
-for (let i = 0; i < functionNumber; i++) {
+for (let i = 0; i < acceptedUsers.length; i++) {
   if (userMail === acceptedUsers[i]) {
     accepted = 1;
-    functionNumber = i;
-  } else {
-    accepted = 0;
   }
 }
 
@@ -45,29 +40,28 @@ if (accepted == 0) {
 
   let websiteNumber = Math.floor(Math.random() * 6 + 1);
 
+  let print = document.querySelector(".result");
+
   if (userNumber == websiteNumber) {
-    alert(
+    print.innerHTML =
       "Il tuo numero è " +
-        userNumber +
-        " quello del sito è " +
-        websiteNumber +
-        " , Sembra proprio una patta !"
-    );
+      userNumber +
+      " quello del sito è " +
+      websiteNumber +
+      " , Sembra proprio una patta !";
   } else if (userNumber < websiteNumber) {
-    alert(
+    print.innerHTML =
       "Il tuo numero è " +
-        userNumber +
-        " quello del sito è " +
-        websiteNumber +
-        " , Mi dispiace ritenta sarai più fortunato !"
-    );
+      userNumber +
+      " quello del sito è " +
+      websiteNumber +
+      " , Mi dispiace ritenta sarai più fortunato !";
   } else {
-    alert(
+    print.innerHTML =
       "Il tuo numero è " +
-        userNumber +
-        " quello del sito è " +
-        websiteNumber +
-        " , Complimenti hai vinto !"
-    );
+      userNumber +
+      " quello del sito è " +
+      websiteNumber +
+      " , Complimenti hai vinto !";
   }
 }
