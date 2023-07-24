@@ -32,3 +32,42 @@ for (let i = 0; i < functionNumber; i++) {
 }
 
 console.log(accepted);
+
+// popup message
+
+if (accepted == 0) {
+  alert("Inserire nuovamente la mail, facendo attenzione");
+} else if (accepted == 1) {
+  //   alert("Benvenuto");
+  //   number generators
+
+  let userNumber = Math.floor(Math.random() * 6 + 1);
+
+  let websiteNumber = Math.floor(Math.random() * 6 + 1);
+
+  if (userNumber == websiteNumber) {
+    alert(
+      "Il tuo numero è " +
+        userNumber +
+        " quello del sito è " +
+        websiteNumber +
+        " , Sembra proprio una patta !"
+    );
+  } else if (userNumber < websiteNumber) {
+    alert(
+      "Il tuo numero è " +
+        userNumber +
+        " quello del sito è " +
+        websiteNumber +
+        " , Mi dispiace ritenta sarai più fortunato !"
+    );
+  } else {
+    alert(
+      "Il tuo numero è " +
+        userNumber +
+        " quello del sito è " +
+        websiteNumber +
+        " , Complimenti hai vinto !"
+    );
+  }
+}
