@@ -19,5 +19,8 @@ console.log(userMail);
 // check list
 
 for (let i = 0; i < acceptedUsers.length; i++) {
-  console.log(i);
+  console.log(acceptedUsers[i]);
+  if (userMail === acceptedUsers[i]) {
+    console.log("accepted");
+  }
 }
