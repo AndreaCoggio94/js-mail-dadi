@@ -9,12 +9,10 @@ const acceptedUsers = [
   "alessandro.neri@gmail.com",
   "admin.dude@gmail.com",
 ];
-console.log(acceptedUsers.length);
 
 // prompt user mail
 
 const userMail = prompt("Inserisci la tua mail").toLowerCase();
-console.log(userMail);
 
 // check list
 
@@ -26,14 +24,12 @@ for (let i = 0; i < acceptedUsers.length; i++) {
   }
 }
 
-console.log(accepted);
-
 // popup message
 
 if (accepted == 0) {
-  alert("Inserire nuovamente la mail, facendo attenzione");
+  let errorPrint = document.querySelector("h1");
+  errorPrint.innerHTML = "Inserire nuovamente la mail, facendo attenzione";
 } else if (accepted == 1) {
-  //   alert("Benvenuto");
   //   number generators
 
   let userNumber = Math.floor(Math.random() * 6 + 1);
