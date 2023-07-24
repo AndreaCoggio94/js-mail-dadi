@@ -13,13 +13,12 @@ console.log(acceptedUsers.length);
 
 // prompt user mail
 
-const userMail = prompt("Inserisci la tua mail");
+const userMail = prompt("Inserisci la tua mail").toLowerCase();
 console.log(userMail);
 
 // check list
 
 for (let i = 0; i < acceptedUsers.length; i++) {
-  console.log(acceptedUsers[i]);
   if (userMail === acceptedUsers[i]) {
     console.log("accepted");
   }
